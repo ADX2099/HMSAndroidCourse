@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        android:text="Pedir permiso Location"
+        android:text="Devolver Mensaje"
         app:backgroundTint="#009688" />
 
     <Button

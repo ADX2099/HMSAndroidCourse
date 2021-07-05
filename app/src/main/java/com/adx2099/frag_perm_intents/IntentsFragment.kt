@@ -4,6 +4,7 @@ import android.app.SearchManager
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -18,9 +19,19 @@ class IntentsFragment : Fragment() {
         _binding = FragmentIntentsBinding.inflate(inflater, container, false)
         val view = binding.root
         binding.btnNavegador.setOnClickListener {
-            val webpage: Uri = Uri.parse("https://developer.huawei.com/en/")
+            /*val webpage: Uri = Uri.parse("https://developer.huawei.com/en/")
             val intent = Intent(Intent.ACTION_VIEW, webpage)
-            startActivity(intent)
+            startActivity(intent)*/
+            val bundle=Bundle().apply {
+                putString("Saludo","hola")
+                putString("Mensaje","Enviado desde fragmentIntents")
+            }
+
+            val intent=Intent().apply {
+                action=DataReceiver.ACTION_SHARE_DATA
+                putExtras(bundle)
+            }
+            requireContext().sendBroadcast(intent)
         }
         binding.btnCall.setOnClickListener{
             val intent = Intent(Intent.ACTION_DIAL).apply {
@@ -39,8 +50,16 @@ class IntentsFragment : Fragment() {
         return view
     }
 
+    fun receiveData(data:Bundle){
+        for(key in data.keySet()){
+            Log.e("IntentsFragment","$key dato: ${data.get(key)}")
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }
