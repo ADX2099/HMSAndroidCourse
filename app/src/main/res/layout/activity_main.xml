@@ -21,44 +21,17 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.023" />
+    <!--TODO: 2 Modificar el fragment por el navhost Cambiando el id, name y que ocupe toda la pantalla. Ademas borra todos
+    los demas atributos y agrega nav Graph y default navhost-->
 
     <fragment
-        android:id="@+id/fragmentIntents"
-        android:name="com.adx2099.frag_perm_intents.IntentsFragment"
+        android:id="@+id/myNavHostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/navigation"
+        app:defaultNavHost="true" />
+    <!--TODO: 1 Borrar Fragment y Boton-->
 
-    <fragment
-        android:id="@+id/fragmentPermissions"
-        android:name="com.adx2099.frag_perm_intents.PermissionFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentIntents" />
-
-    <Button
-        android:id="@+id/btn_act_dos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:layout_marginBottom="24dp"
-        android:text="GOTO Activity 2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentPermissions" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

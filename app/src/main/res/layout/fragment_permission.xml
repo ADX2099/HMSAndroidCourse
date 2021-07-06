@@ -7,7 +7,7 @@
     android:background="#3F51B5"
     tools:context=".PermissionFragment">
 
-
+    <!-- TODO: 6 Ahora agregamos este freagment a la navegacion y lo contectamos -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -40,6 +40,23 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="130dp"
         android:text="Petal Search" />
+    <!-- TODO: 8 Agrega un boton que permita ir hacia el nuevo fragment -->
+
+    <Button
+        android:id="@+id/permiButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ir a Nuevo Fragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="330dp"/>
+
+    <Button
+        android:id="@+id/condicionalButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Decidamos a donde ir"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="430dp"/>
 
 
 

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/intentsFragment">
+
+    <fragment
+        android:id="@+id/intentsFragment"
+        android:name="com.adx2099.frag_perm_intents.IntentsFragment"
+        android:label="fragment_intents"
+        tools:layout="@layout/fragment_intents" >
+        <action
+            android:id="@+id/action_intentsFragment_to_permissionFragment"
+            app:destination="@id/permissionFragment" />
+        <action
+            android:id="@+id/action_intentsFragment_to_condicionalFragment"
+            app:destination="@id/condicionalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="com.adx2099.frag_perm_intents.PermissionFragment"
+        android:label="fragment_permission"
+        tools:layout="@layout/fragment_permission" />
+    <fragment
+        android:id="@+id/condicionalFragment"
+        android:name="com.adx2099.frag_perm_intents.CondicionalFragment"
+        android:label="fragment_condicional"
+        tools:layout="@layout/fragment_condicional" />
+    <fragment
+        android:id="@+id/acercaDeFragment"
+        android:name="com.adx2099.frag_perm_intents.AcercaDeFragment"
+        android:label="fragment_acerca_de"
+        tools:layout="@layout/fragment_acerca_de" />
+</navigation>
